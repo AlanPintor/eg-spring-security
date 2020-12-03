@@ -25,15 +25,15 @@ public class User {
     private String username = "";
 
     public User(String username, String password, String roles, String permissions){
-        email=username;
+        this.username=username;
         this.password=password;
         this.roles=roles;
         this.permissions=permissions;
         this.active = 1;
     }
 
-    public String getUsername() { return email; }
-    public void setUsername(String username) { email = username; }
+    public String getUsername() { return username; }
+    public void setUsername(String username) { username = username; }
     public int getActive() { return active; }
     public void setActive(int active) { this.active = active; }
     public String getRoles() { return roles; }
@@ -60,21 +60,21 @@ public class User {
 
     public User(){}
 
-    public User(String firstname, String lastname, String address, String email, String password,String role){
+//    public User(String firstname, String lastname, String address, String email, String password,String role){
+//
+//        this.firstname=firstname;
+//        this.lastname=lastname;
+//        this.address=address;
+//        this.email=email;
+//        this.password=password;
+//        this.role=role;
+//    }
 
-        this.firstname=firstname;
-        this.lastname=lastname;
-        this.address=address;
-        this.email=email;
-        this.password=password;
-        this.role=role;
-    }
-
-    @Override
-    public String toString(){
-        return String.format("User[id=%d, firstname='%s', lastname='%s', address='%s', email='%s',password='%s']",
-                id,firstname,lastname,address,email,password);
-    }
+//    @Override
+//    public String toString(){
+//        return String.format("User[id=%d, firstname='%s', lastname='%s', address='%s', email='%s',password='%s']",
+//                id,firstname,lastname,address,email,password);
+//    }
 
     public int getId(){
         return id;
